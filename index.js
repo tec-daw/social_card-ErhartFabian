@@ -94,11 +94,11 @@ function Info (props) {
     )
 }
 
-function button() {
-    const [count, setCount] = contador(0);
+function Likes() {
+    const [count, setCount] = React.useState(0);
   
     return (
-        <button onClick={/* () => contador(count + 1) */console.log(click)}>
+        <button onClick={() => setCount(count + 1)}>
           Likes: {count}
         </button>
     );
@@ -109,7 +109,7 @@ ReactDOM.render(
     <Header name="Erhart Fabian Castillo Castellanos" major="Engineering student at Tec de Monterrey"/>
     <Info linkedin="www.linkedin.com/in/ErhartFabian" mail="A01274089@itesm.mx" numero="775-134-2305" />
     <Skills/>
-    <button/>
+    <Likes/>
     </React.Fragment>,
     rootElement
 )
